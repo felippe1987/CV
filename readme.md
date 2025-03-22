@@ -1,4 +1,5 @@
-assets/images/referência.png
+
+![referência](https://github.com/user-attachments/assets/15e9d2bf-6c71-4c6f-8a91-d44e61e78163)
 
 🌐 Acesso Online
 O portfólio está hospedado na Vercel e pode ser acessado através do link:
