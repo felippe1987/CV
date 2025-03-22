@@ -3,7 +3,7 @@
 
 🌐 Acesso Online
 O portfólio está hospedado na Vercel e pode ser acessado através do link:
-👉 felipe-alberto-dev.com
+👉 [felipe-alberto-dev.com](https://portfolio-felipe-alberto.vercel.app/)
 
 # Meu Portfólio profissional
 
