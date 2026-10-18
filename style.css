@@ -327,6 +327,132 @@ main {
   align-items: flex-start;
 }
 
+/* Experiencia Profissional */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-container h2 {
+  font-size: 1.5rem;
+  font-weight: extra-bold;
+  text-align: center;
+  background: linear-gradient(90deg, #e3663f, #dd6896, #af45dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* Linha central pontilhada */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #dd6896,
+    #e3663f 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  transform: translateX(-50%);
+}
+
+/* Itens da linha do tempo */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Conteúdo dos itens */
+.timeline-content {
+  width: 45%;
+  padding: 1.5rem;
+  background: #222222;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  padding: 2px 0;
+  background: linear-gradient(90deg, #e3663f, #dd6896, #af45dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Posicionamento alternado (esquerda/direita) */
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 55%;
+}
+
+/* Ponto na linha */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #af45dc;
+  border-radius: 50%;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #dd6896;
+}
+
+/* Setas dos itens */
+.timeline-item:nth-child(odd) .timeline-content::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #222222;
+  right: -8px;
+  top: 15px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #222222 transparent transparent;
+  left: -8px;
+  top: 15px;
+}
+
+/* Estilos do conteúdo */
+.timeline-content h2,
+.timeline-content h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.institution {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.period {
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
 /* Footer */
 .footer {
   background-color: #222222;
@@ -473,6 +599,33 @@ main {
   }
 }
 
+/* Responsividade para experiencias e tecnologias */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 70px);
+    margin-left: 50px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 20px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::after,
+  .timeline-item:nth-child(even) .timeline-content::after {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent #222222 transparent transparent;
+    left: -8px;
+    right: auto;
+  }
+}
 /* keyframes */
 @keyframes typing {
   from {

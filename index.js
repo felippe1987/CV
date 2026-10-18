@@ -38,3 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//Função para voltar ao topo
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+document.getElementById("backToTop").addEventListener("click", scrollToTop);
+// Função para exibir o modal de contato
+function showContactModal() {
+  const modal = document.getElementById("contactModal");
+  modal.style.display = "block";
+}
